@@ -19,19 +19,21 @@ export class TodoItemComponent implements OnInit {
     let classes = {
       'todo': true,   // always add this CSS class to this component
       // todo: true,   // could also be written this way, but I keep the quotes for consitency across style classes
-      'is-complete': this.todo.isComplete,  // add this CSS class to the component if 'this.todo.isComplete' is true
+      'is-complete': this.todo.completed,  // add this CSS class to the component if 'this.todo.completed' is true
     }
     return classes;
   }
 
   onToggle(todo: Todo): void {
-    // toggle the isCompleted property
+    // toggle the completed property
     // console.log("toggle");
-    todo.isComplete = !todo.isComplete;
+    todo.completed = !todo.completed;
+    // console.log(todo);   // for debug
   }
-
+  
   onDelete(todo: Todo): void {
     console.log("Delete");
+    // console.log(todo);   // for debug
   }
 
 }

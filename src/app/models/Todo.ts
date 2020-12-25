@@ -3,11 +3,11 @@ export class Todo {
     // for optional fields, we write id?: number
     id: number;
     title: string;
-    isComplete: boolean;
+    completed: boolean;
 
-    constructor(id: number, title: string, isComplete: boolean) {
+    constructor(id: number, title: string, completed: boolean) {
         this.id = id;
         this.title = title;
-        this.isComplete = isComplete; 
+        this.completed = completed; 
     }
 }
