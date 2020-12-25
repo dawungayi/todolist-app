@@ -1,0 +1,10 @@
+<!-- set the classes for the CSS properties for this componenet - a single todo-item - based on certain parameters as described in the method name passed to [ngClass] in todo-item.component.ts -->
+<div [ngClass]="setClasses()"> 
+    <!-- In the component's template we cannot have two root elements.
+    All elements need to be wrapped in a single HTML element - in this case, a <div>. -->
+    <p>
+        <input type="checkbox" >
+        {{ todo.title }}
+        <button class="del">x</button>
+    </p>
+</div>

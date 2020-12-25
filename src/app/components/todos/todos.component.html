@@ -1,0 +1,6 @@
+<h1>Todos</h1>
+
+<!-- looping through the list todos in todos.components.ts -->
+<!-- passing a property to this app-todo-item -->
+<app-todo-item *ngFor="let todo of todos" [todo]="todo">
+</app-todo-item>
