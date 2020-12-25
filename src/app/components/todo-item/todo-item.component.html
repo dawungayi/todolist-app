@@ -3,8 +3,10 @@
     <!-- In the component's template we cannot have two root elements.
     All elements need to be wrapped in a single HTML element - in this case, a <div>. -->
     <p>
-        <input type="checkbox" >
+        <!-- add a method - onToggle() - when a "change" event happens to the checkbox of this todo component -->
+        <input (change)="onToggle(todo)" type="checkbox" >
         {{ todo.title }}
-        <button class="del">x</button>
+        <!-- add a method - onDelete() - when a "click" event happens to the button of this todo component -->
+        <button (click)="onDelete(todo)" class="del">x</button>
     </p>
 </div>
