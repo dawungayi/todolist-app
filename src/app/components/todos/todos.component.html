@@ -1,8 +1,10 @@
-<h1>Todos</h1>
-
+<!-- (eventName) = "eventMethod($event)": catch the event (lhs) from the child .ts component, and call the method (rhs) in this component's ts file -->
+<app-add-todo
+(addTodo)="addTodo($event)"
+>
+</app-add-todo>
 <!-- looping through the list todos in todos.components.ts -->
 <!-- passing a property to this app-todo-item -->
-<!-- catch the deleteTodo event (lhs) from the child component, and call the deleteTodo method (rhs) in the component's ts file -->
 <app-todo-item 
     *ngFor="let todo of todos" 
     [todo]="todo"

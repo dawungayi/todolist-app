@@ -31,6 +31,12 @@ export class TodoService {
     // returns an observable
   }
 
+  // add a record to the DB: POST request
+  addTodo(todo: Todo): Observable<any> {
+    const url: string = this.todosUrl; 
+    return this.http.post(url, todo, httpOptions);
+  }
+
   // toggle completed field: PUT request to this specific todo Id  
   // Use <any> instead of <Todo> class since this API has an extra fields (userId) which means it will be formatted differently from the Todo class we defined
   toggleCompleted(todo: Todo): Observable<any> {
@@ -44,6 +50,4 @@ export class TodoService {
     const url: string = `${this.todosUrl}/${todo.id}`;  
     return this.http.delete<Todo>(url, httpOptions);
   }
-
-
 }

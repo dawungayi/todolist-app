@@ -1,0 +1,7 @@
+<form class="form" (ngSubmit)="onSubmit()">
+    <!-- bind this text input to the 'title' property in the add-todo component .ts file   -->
+    <input type="text" name="title" [(ngModel)]="title" placeholder="Add Todo...">
+    <!-- the line below gves an interesting effect, and proves that the text input above is bound to the property named 'title' in this component's class -->
+    <!-- {{ title }} -->
+    <input type="submit" value="Submit" class="btn">
+</form>
