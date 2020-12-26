@@ -8,7 +8,7 @@ import { Todo } from '../../models/Todo';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-  todos: Todo[];
+  todos: Todo[] = [];   // i nitializing to prevent compiler errors
 
   // binding to the service imported
   constructor(private todoService: TodoService) { }

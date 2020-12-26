@@ -9,7 +9,7 @@ export class AddTodoComponent implements OnInit {
   // <any> b/c it's not formatted like out Todo model (has no id field)
   @Output() addTodo: EventEmitter<any> = new EventEmitter();
 
-  title: string;
+  title: string = "";   // initializing to prevent compiler errors
 
   constructor() { }
 
