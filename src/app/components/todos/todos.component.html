@@ -2,5 +2,10 @@
 
 <!-- looping through the list todos in todos.components.ts -->
 <!-- passing a property to this app-todo-item -->
-<app-todo-item *ngFor="let todo of todos" [todo]="todo">
+<!-- catch the deleteTodo event (lhs) from the child component, and call the deleteTodo method (rhs) in the component's ts file -->
+<app-todo-item 
+    *ngFor="let todo of todos" 
+    [todo]="todo"
+    (deleteTodo)="deleteTodo($event)"
+    >
 </app-todo-item>
